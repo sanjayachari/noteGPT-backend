@@ -5,17 +5,48 @@ from fastapi import APIRouter, Depends, HTTPException
 from pydantic import BaseModel, Field
 from sqlalchemy.orm import Session
 from sqlalchemy.sql import func
+from google.genai.errors import ServerError
 
 from app.db.session import get_db
 from app.db.models import Document, Conversation, ChatMessage
 
 from app.services.retriever import retrieve_similar_chunks
-from app.services.llm import generate_answer
-from app.services.query_rewriter import rewrite_query
-from app.services.multi_query import generate_multiple_queries
-from app.services.context_compressor import compress_context
+
+# Existing Ollama imports retained for reference
+# from app.services.llm import generate_answer
+# from app.services.query_rewriter import rewrite_query
+# from app.services.multi_query import generate_multiple_queries
+# from app.services.context_compressor import compress_context
+
+from app.services.groq_llm import generate_answer
+from app.services.groq_query_rewriter import rewrite_query
+from app.services.groq_multi_query import generate_multiple_queries
+from app.services.groq_context_compressor import compress_context
 
 router = APIRouter()
+
+
+# Handle Gemini API errors
+def call_gemini(function, *args, **kwargs):
+    try:
+        return function(*args, **kwargs)
+
+    except ServerError as error:
+        if getattr(error, "code", None) == 503:
+            raise HTTPException(
+                status_code=503,
+                detail={
+                    "error": "AI_SERVICE_BUSY",
+                    "message": (
+                        "Our AI service is currently experiencing "
+                        "high demand. Please try again in a few moments."
+                    ),
+                    "retryable": True,
+                },
+                headers={"Retry-After": "30"},
+            ) from error
+
+        raise
 
 
 class ChatRequest(BaseModel):
@@ -221,14 +252,16 @@ def chat_with_pdf(
     )
 
     # 6. Rewrite the question
-    rewritten_query = rewrite_query(
+    rewritten_query = call_gemini(
+        rewrite_query,
         question=request.question,
         chat_history=chat_history,
     )
 
     # 7. Generate alternative queries
-    alternative_queries = generate_multiple_queries(
-        rewritten_query
+    alternative_queries = call_gemini(
+        generate_multiple_queries,
+        rewritten_query,
     )
 
     all_queries = list(dict.fromkeys(
@@ -274,7 +307,8 @@ def chat_with_pdf(
     context = "\n\n".join(context_parts)
 
     # 10. Compress retrieved context
-    compressed_context = compress_context(
+    compressed_context = call_gemini(
+        compress_context,
         question=request.question,
         context=context,
     )
@@ -309,7 +343,8 @@ def chat_with_pdf(
             chunk.page_number for chunk in source_chunks
         ))
 
-        answer = generate_answer(
+        answer = call_gemini(
+            generate_answer,
             question=request.question,
             context=answer_context,
             source_pages=source_pages,

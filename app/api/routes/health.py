@@ -1,9 +1,10 @@
 
-from fastapi import APIRouter, Depends
+from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy import text
 from sqlalchemy.orm import Session
 
 from app.db.session import get_db
+from app.services.groq_llm import MODEL_NAME
 
 router = APIRouter()
 
@@ -19,8 +20,11 @@ def database_health(db: Session = Depends(get_db)):
             "database": "PostgreSQL",
             "version": version,
         }
-    except Exception as e:
-        return {
-            "status": "error",
-            "message": str(e),
-        }
+    except Exception:
+        raise HTTPException(
+            status_code=503,
+            detail={
+                "status": "error",
+                "message": "Database connection failed",
+            },
+        )
