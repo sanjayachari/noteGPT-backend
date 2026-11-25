@@ -1,0 +1,640 @@
+[
+  {
+    "document_id": 6,
+    "question": "What type of devices were used most often by the study participants for English language study?",
+    "expected_answer": "Smartphones",
+    "expected_chunk_ids": [
+      97
+    ],
+    "expected_pages": [
+      5
+    ]
+  },
+  {
+    "document_id": 6,
+    "question": "How long, on average, had the study participants been using their mobile devices for English language study?",
+    "expected_answer": "3.80 years",
+    "expected_chunk_ids": [
+      97
+    ],
+    "expected_pages": [
+      5
+    ]
+  },
+  {
+    "document_id": 6,
+    "question": "According to the text, what year did the field of learner autonomy start to be influenced by technology?",
+    "expected_answer": "mid-1990s",
+    "expected_chunk_ids": [
+      91
+    ],
+    "expected_pages": [
+      3
+    ]
+  },
+  {
+    "document_id": 6,
+    "question": "How do new technologies, such as the internet and mobile devices, benefit language learners who do not have direct access to the target language?",
+    "expected_answer": "They provide occasions for language learners to 'bypass classrooms and go directly to target language texts and users through the internet and social media'.",
+    "expected_chunk_ids": [
+      91
+    ],
+    "expected_pages": [
+      3
+    ]
+  },
+  {
+    "document_id": 6,
+    "question": "Why did the study participants choose to use their mobile devices to learn English?",
+    "expected_answer": "They regarded them as convenient, fast and always ready to use, and also had quick access to the internet and could organize their own study materials and/or resources.",
+    "expected_chunk_ids": [
+      99
+    ],
+    "expected_pages": [
+      6
+    ]
+  },
+  {
+    "document_id": 6,
+    "question": "What is one way in which a smartphone can replace a traditional paper dictionary, according to S14?",
+    "expected_answer": "It can successfully replace a traditional paper dictionary and save time searching for words.",
+    "expected_chunk_ids": [
+      99
+    ],
+    "expected_pages": [
+      6
+    ]
+  },
+  {
+    "document_id": 6,
+    "question": "According to Holec (1981), what is the definition of autonomy in the context of language learning?",
+    "expected_answer": "the ability to take charge of one’s own learning",
+    "expected_chunk_ids": [
+      88
+    ],
+    "expected_pages": [
+      2
+    ]
+  },
+  {
+    "document_id": 6,
+    "question": "How does Benson (2001) describe autonomy in language learning?",
+    "expected_answer": "autonomy is multidimensional and takes many different forms according to the person, the setting, and multiple contextual and micro-contextual factors",
+    "expected_chunk_ids": [
+      88
+    ],
+    "expected_pages": [
+      2
+    ]
+  },
+  {
+    "document_id": 6,
+    "question": "What is the primary reason why some students use their mobile devices (MobDs) in the classroom?",
+    "expected_answer": "To check unfamiliar vocabulary and/or find words they needed during various language activities",
+    "expected_chunk_ids": [
+      101
+    ],
+    "expected_pages": [
+      7
+    ]
+  },
+  {
+    "document_id": 6,
+    "question": "Why did some students prefer not to use their MobDs at home?",
+    "expected_answer": "Because they favored their home computers",
+    "expected_chunk_ids": [
+      101
+    ],
+    "expected_pages": [
+      7
+    ]
+  },
+  {
+    "document_id": 6,
+    "question": "Who wrote the 1991 book 'Learner autonomy 1: Definitions, issues and problems'?",
+    "expected_answer": "Little, D.",
+    "expected_chunk_ids": [
+      113
+    ],
+    "expected_pages": [
+      11
+    ]
+  },
+  {
+    "document_id": 6,
+    "question": "What is the title of the 2015 article by Oz, which investigates preservice English teachers' perceptions of mobile-assisted language learning?",
+    "expected_answer": "An investigation of preservice English teachers’ perceptions of mobile assisted language learning.",
+    "expected_chunk_ids": [
+      113
+    ],
+    "expected_pages": [
+      11
+    ]
+  },
+  {
+    "document_id": 6,
+    "question": "According to the text, what is one benefit of using mobile devices for language learning?",
+    "expected_answer": "easy access to English language resources",
+    "expected_chunk_ids": [
+      107
+    ],
+    "expected_pages": [
+      9
+    ]
+  },
+  {
+    "document_id": 6,
+    "question": "How did the majority of the interviewees perceive the impact of using mobile devices on their English development?",
+    "expected_answer": "the positive impact of using mobile devices for English study",
+    "expected_chunk_ids": [
+      107
+    ],
+    "expected_pages": [
+      9
+    ]
+  },
+  {
+    "document_id": 6,
+    "question": "According to the text, what language skills and subsystems did most of the interviewees choose to practice using mobile devices?",
+    "expected_answer": "target language vocabulary, pronunciation",
+    "expected_chunk_ids": [
+      104
+    ],
+    "expected_pages": [
+      8
+    ]
+  },
+  {
+    "document_id": 6,
+    "question": "Why did most of the interviewees prefer to use mobile devices to practice English vocabulary?",
+    "expected_answer": "because they regarded this language subsystem as the most important to learn and praised their MobDs for providing quick and easy access to needed words",
+    "expected_chunk_ids": [
+      104
+    ],
+    "expected_pages": [
+      8
+    ]
+  },
+  {
+    "document_id": 6,
+    "question": "What was the research question posed in this study regarding language learners' engagement with technology-mediated environments?",
+    "expected_answer": "Do students engage with their mobile devices to develop learning experiences that meet their needs and goals as English language learners?",
+    "expected_chunk_ids": [
+      94
+    ],
+    "expected_pages": [
+      4
+    ]
+  },
+  {
+    "document_id": 6,
+    "question": "What was the average age of the participants in the study?",
+    "expected_answer": "22.22 years old",
+    "expected_chunk_ids": [
+      94
+    ],
+    "expected_pages": [
+      4
+    ]
+  },
+  {
+    "document_id": 6,
+    "question": "What type of devices were found to be particularly useful for advanced learners of English in their learning endeavors?",
+    "expected_answer": "Mobile devices, smartphones and tablet computers",
+    "expected_chunk_ids": [
+      86
+    ],
+    "expected_pages": [
+      1
+    ]
+  },
+  {
+    "document_id": 6,
+    "question": "According to Benson, what has always been a connection between educational technologies and learner autonomy?",
+    "expected_answer": "Educational technologies have often been intended for independent practice",
+    "expected_chunk_ids": [
+      86
+    ],
+    "expected_pages": [
+      1
+    ]
+  },
+  {
+    "document_id": 6,
+    "question": "What type of data collection instrument was used in this study?",
+    "expected_answer": "semi-structured interview",
+    "expected_chunk_ids": [
+      110
+    ],
+    "expected_pages": [
+      10
+    ]
+  },
+  {
+    "document_id": 6,
+    "question": "What may result from teacher involvement in creating conditions conducive to the use of mobile devices for language study?",
+    "expected_answer": "greater learner engagement with mobile technology and greater students' independence in learning the target language",
+    "expected_chunk_ids": [
+      110
+    ],
+    "expected_pages": [
+      10
+    ]
+  },
+  {
+    "document_id": 6,
+    "question": "Where did the researchers choose to access the participants for their study?",
+    "expected_answer": "for convenience since they were accessible to the researcher",
+    "expected_chunk_ids": [
+      114
+    ],
+    "expected_pages": [
+      11
+    ]
+  },
+  {
+    "document_id": 6,
+    "question": "In which language were the interviews conducted?",
+    "expected_answer": "in Polish",
+    "expected_chunk_ids": [
+      114
+    ],
+    "expected_pages": [
+      11
+    ]
+  },
+  {
+    "document_id": 6,
+    "question": "According to Reinders and White (2016), what is the key requirement for individuals to benefit from and contribute effectively to technology-mediated learning settings?",
+    "expected_answer": "critical adaptive learning",
+    "expected_chunk_ids": [
+      87
+    ],
+    "expected_pages": [
+      1
+    ]
+  },
+  {
+    "document_id": 6,
+    "question": "What devices, according to the text, should language teachers equip foreign/second language learners with, and why?",
+    "expected_answer": "mobile devices, specifically smartphones and tablets, so that learners can benefit from and contribute effectively to language study",
+    "expected_chunk_ids": [
+      87
+    ],
+    "expected_pages": [
+      1
+    ]
+  },
+  {
+    "document_id": 6,
+    "question": "According to Littlewood (1996), what are the two major components that determine an individual's capacity to make and carry out choices that govern their actions?",
+    "expected_answer": "ability and willingness",
+    "expected_chunk_ids": [
+      89
+    ],
+    "expected_pages": [
+      2
+    ]
+  },
+  {
+    "document_id": 6,
+    "question": "How does Reinders (2011) define autonomous language learning?",
+    "expected_answer": "an act of learning whereby motivated learners consciously make informed decisions about that learning",
+    "expected_chunk_ids": [
+      89
+    ],
+    "expected_pages": [
+      2
+    ]
+  },
+  {
+    "document_id": 6,
+    "question": "According to the text, what is the main advantage of having a mobile device for language learners?",
+    "expected_answer": "The main advantage is that it allows language learners to take control of their learning, direct it, and engage in activities that meet their individual needs and goals.",
+    "expected_chunk_ids": [
+      92
+    ],
+    "expected_pages": [
+      3
+    ]
+  },
+  {
+    "document_id": 6,
+    "question": "How do different researchers define mobile learning, according to the text?",
+    "expected_answer": "Some researchers define mobile learning as an extension of e-learning built upon mobile devices, while others understand it as learning that happens anywhere and anytime.",
+    "expected_chunk_ids": [
+      92
+    ],
+    "expected_pages": [
+      3
+    ]
+  },
+  {
+    "document_id": 6,
+    "question": "What proficiency level do the participants of the study represent, according to the Common European Framework of Reference for Languages?",
+    "expected_answer": "between B1 and B2 (second year BA students), B2 and C1 (third year BA students), and C1 and C2 (second year MA students)",
+    "expected_chunk_ids": [
+      95
+    ],
+    "expected_pages": [
+      4
+    ]
+  },
+  {
+    "document_id": 6,
+    "question": "How were the data collected during the study?",
+    "expected_answer": "by means of a semi-structured interview",
+    "expected_chunk_ids": [
+      95
+    ],
+    "expected_pages": [
+      4
+    ]
+  },
+  {
+    "document_id": 6,
+    "question": "At what average age did the participants start using their mobile devices for English language study?",
+    "expected_answer": "3.80 years",
+    "expected_chunk_ids": [
+      98
+    ],
+    "expected_pages": [
+      5
+    ]
+  },
+  {
+    "document_id": 6,
+    "question": "What percentage of the students regarded themselves as experienced or fairly experienced users of their MobDs for English language learning?",
+    "expected_answer": "55%",
+    "expected_chunk_ids": [
+      98
+    ],
+    "expected_pages": [
+      5
+    ]
+  },
+  {
+    "document_id": 6,
+    "question": "What tools did the students use to check, revise, and learn target language vocabulary?",
+    "expected_answer": "online dictionaries (e.g. diki, ColorDict Dictionary) and a variety of mobile apps, such as Google Translate, Duolingo and Fiszkoteka",
+    "expected_chunk_ids": [
+      100
+    ],
+    "expected_pages": [
+      6
+    ]
+  },
+  {
+    "document_id": 6,
+    "question": "What was the purpose of the students using Voscreen and WhatsApp, according to the interviewees?",
+    "expected_answer": "mobile apps for watching video and communicating with people, respectively",
+    "expected_chunk_ids": [
+      100
+    ],
+    "expected_pages": [
+      6
+    ]
+  },
+  {
+    "document_id": 6,
+    "question": "What do students primarily use their MobDs for in the classroom?",
+    "expected_answer": "to check unfamiliar vocabulary and/or find words they needed during various language activities",
+    "expected_chunk_ids": [
+      102
+    ],
+    "expected_pages": [
+      7
+    ]
+  },
+  {
+    "document_id": 6,
+    "question": "How many interviewees were in favor of using their smartphones and/or tablet computers for informal English learning?",
+    "expected_answer": "13 or 65% of the interviewees",
+    "expected_chunk_ids": [
+      102
+    ],
+    "expected_pages": [
+      7
+    ]
+  },
+  {
+    "document_id": 6,
+    "question": "According to the text, what is one reason why some students preferred to use traditional resources (e.g. grammar books) instead of MobDs?",
+    "expected_answer": "They preferred more traditional resources",
+    "expected_chunk_ids": [
+      105
+    ],
+    "expected_pages": [
+      8
+    ]
+  },
+  {
+    "document_id": 6,
+    "question": "What is one benefit of using MobDs, according to one of the interviewees?",
+    "expected_answer": "It allows learners to devote more time to learning English",
+    "expected_chunk_ids": [
+      105
+    ],
+    "expected_pages": [
+      8
+    ]
+  },
+  {
+    "document_id": 6,
+    "question": "What was the main reason why some students used their mobile devices in language classes?",
+    "expected_answer": "to achieve their goals and adjust their learning of the target language to their personal learning styles",
+    "expected_chunk_ids": [
+      108
+    ],
+    "expected_pages": [
+      9
+    ]
+  },
+  {
+    "document_id": 6,
+    "question": "What do the researchers suggest language teachers should do to alter the subjects' use of mobile devices?",
+    "expected_answer": "present the affordances of mobile technology and discuss them with students during language classes, select mobile apps and create opportunities for using them in- and out-of-class learning",
+    "expected_chunk_ids": [
+      108
+    ],
+    "expected_pages": [
+      9
+    ]
+  },
+  {
+    "document_id": 6,
+    "question": "What is the main focus of the book 'Left to my own devices: Learner autonomy and mobile-assisted language learning' edited by J. Díaz-Vera?",
+    "expected_answer": "Learner autonomy and mobile-assisted language learning",
+    "expected_chunk_ids": [
+      111
+    ],
+    "expected_pages": [
+      10
+    ]
+  },
+  {
+    "document_id": 6,
+    "question": "Who edited the book 'Promoting active learning through the integration of mobile and ubiquitous technologies'?",
+    "expected_answer": "J. Keengwe",
+    "expected_chunk_ids": [
+      111
+    ],
+    "expected_pages": [
+      10
+    ]
+  },
+  {
+    "document_id": 6,
+    "question": "What types of language learning practices were investigated in the study?",
+    "expected_answer": "informal language learning practices",
+    "expected_chunk_ids": [
+      93
+    ],
+    "expected_pages": [
+      3
+    ]
+  },
+  {
+    "document_id": 6,
+    "question": "Who investigated the use of mobile devices for learning a foreign language?",
+    "expected_answer": "Dashtestani, Stockwell",
+    "expected_chunk_ids": [
+      93
+    ],
+    "expected_pages": [
+      3
+    ]
+  },
+  {
+    "document_id": 6,
+    "question": "What type of training did the interviewees undergo to address the challenges of foreign/second language learning and teaching?",
+    "expected_answer": "official teacher training in technology-mediated language learning and teaching and learner autonomy",
+    "expected_chunk_ids": [
+      109
+    ],
+    "expected_pages": [
+      9
+    ]
+  },
+  {
+    "document_id": 6,
+    "question": "What is one limitation of the study reported in this paper, according to the text?",
+    "expected_answer": "the small number of participants",
+    "expected_chunk_ids": [
+      109
+    ],
+    "expected_pages": [
+      9
+    ]
+  },
+  {
+    "document_id": 6,
+    "question": "Has the use of your mobile device(s) increased or decreased since learning English?",
+    "expected_answer": "decreased",
+    "expected_chunk_ids": [
+      96
+    ],
+    "expected_pages": [
+      4
+    ]
+  },
+  {
+    "document_id": 6,
+    "question": "Do you use your mobile device(s) more frequently in- or out-of-class English learning?",
+    "expected_answer": "both",
+    "expected_chunk_ids": [
+      96
+    ],
+    "expected_pages": [
+      4
+    ]
+  },
+  {
+    "document_id": 6,
+    "question": "According to Reinders (2011), what is the definition of autonomous language learning?",
+    "expected_answer": "an act of learning whereby motivated learners consciously make informed decisions about that learning",
+    "expected_chunk_ids": [
+      90
+    ],
+    "expected_pages": [
+      2
+    ]
+  },
+  {
+    "document_id": 6,
+    "question": "Does Reinders (2011) believe that autonomy is an either-or concept, or a continuum?",
+    "expected_answer": "a continuum",
+    "expected_chunk_ids": [
+      90
+    ],
+    "expected_pages": [
+      2
+    ]
+  },
+  {
+    "document_id": 6,
+    "question": "Who is the author of the 2008 article 'An overview of mobile assisted language learning: From content delivery to supported collaboration and interaction'?",
+    "expected_answer": "Kukulska-Hulme, A. & Shield, L.",
+    "expected_chunk_ids": [
+      112
+    ],
+    "expected_pages": [
+      10
+    ]
+  },
+  {
+    "document_id": 6,
+    "question": "What is the title of the 2011 article by Lee?",
+    "expected_answer": "Blogging: Promoting learner autonomy and intercultural competence through study abroad.",
+    "expected_chunk_ids": [
+      112
+    ],
+    "expected_pages": [
+      10
+    ]
+  },
+  {
+    "document_id": 6,
+    "question": "How much time does the author estimate it takes to look up a word in a traditional dictionary compared to an online dictionary?",
+    "expected_answer": "three minutes, ten seconds",
+    "expected_chunk_ids": [
+      106
+    ],
+    "expected_pages": [
+      8
+    ]
+  },
+  {
+    "document_id": 6,
+    "question": "Why does the author devote more time to learning English according to the interviewee?",
+    "expected_answer": "Because they can devote more time to learning it",
+    "expected_chunk_ids": [
+      106
+    ],
+    "expected_pages": [
+      8
+    ]
+  },
+  {
+    "document_id": 6,
+    "question": "Where do the interviewees' teachers suggest they watch videos most often?",
+    "expected_answer": "through their smartphone",
+    "expected_chunk_ids": [
+      103
+    ],
+    "expected_pages": [
+      7
+    ]
+  },
+  {
+    "document_id": 6,
+    "question": "Was the use of mobile devices advised or suggested by the interviewees' teachers?",
+    "expected_answer": "no",
+    "expected_chunk_ids": [
+      103
+    ],
+    "expected_pages": [
+      7
+    ]
+  }
+]
