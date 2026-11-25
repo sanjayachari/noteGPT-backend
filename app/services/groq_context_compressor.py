@@ -51,6 +51,7 @@ RELEVANT COMPRESSED CONTEXT:
             },
         ],
         temperature=0.1,
+        max_tokens=1024,
     )
 
-    return response.choices[0].message.content.strip()
+    return (response.choices[0].message.content or "").strip()

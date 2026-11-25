@@ -45,6 +45,7 @@ REWRITTEN QUERY:
             },
         ],
         temperature=0.1,
+        max_tokens=512,
     )
 
-    return response.choices[0].message.content.strip()
+    return (response.choices[0].message.content or "").strip()

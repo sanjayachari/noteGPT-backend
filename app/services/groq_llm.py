@@ -12,7 +12,7 @@ load_dotenv()
 
 MODEL_NAME = os.getenv(
     "GROQ_MODEL",
-    "openai/gpt-oss-120b",
+    "openai/gpt-oss-20b",
 )
 
 @lru_cache(maxsize=1)
@@ -76,9 +76,10 @@ ANSWER:
             },
         ],
         temperature=0.2,
+        max_tokens=1024,
     )
 
-    return response.choices[0].message.content.strip()
+    return (response.choices[0].message.content or "").strip()
 
 
 def generate_evaluation_questions(context: str) -> list[dict]:

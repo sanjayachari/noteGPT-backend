@@ -6,6 +6,12 @@ from pydantic import BaseModel, Field
 from sqlalchemy.orm import Session
 from sqlalchemy.sql import func
 from google.genai.errors import ServerError
+from groq import (
+    APIConnectionError,
+    APIStatusError,
+    APITimeoutError,
+    RateLimitError,
+)
 
 from app.db.session import get_db
 from app.db.models import Document, Conversation, ChatMessage
@@ -26,10 +32,108 @@ from app.services.groq_context_compressor import compress_context
 router = APIRouter()
 
 
-# Handle Gemini API errors
+def _extract_groq_error_info(error: APIStatusError) -> tuple[str, str]:
+    """Extract error code/type and human-readable message from a Groq API error."""
+    body = getattr(error, "body", None)
+    if isinstance(body, dict):
+        err = body.get("error", {})
+        if isinstance(err, dict):
+            code = str(err.get("code") or err.get("type") or "")
+            msg = str(err.get("message") or str(error))
+            return code, msg
+    return "", str(error)
+
+
+def _extract_retry_after(error: APIStatusError, default: str = "60") -> str:
+    response = getattr(error, "response", None)
+    headers = getattr(response, "headers", None)
+    if headers:
+        retry_after = headers.get("retry-after")
+        if retry_after:
+            return str(retry_after)
+    return default
+
+
+# Handle LLM provider errors (Groq / Gemini)
 def call_gemini(function, *args, **kwargs):
     try:
         return function(*args, **kwargs)
+
+    except RateLimitError as error:
+        code, raw_message = _extract_groq_error_info(error)
+        retry_after = _extract_retry_after(error, default="60")
+        is_token_limit = (
+            "token" in raw_message.lower()
+            or "tokens" in code.lower()
+            or "rate_limit" in code.lower()
+        )
+        raise HTTPException(
+            status_code=429,
+            detail={
+                "error": "TOKEN_LIMIT_EXCEEDED" if is_token_limit else "RATE_LIMIT_EXCEEDED",
+                "message": (
+                    "AI token or rate limit exceeded. Please wait a moment and try again."
+                ),
+                "provider_message": raw_message,
+                "retryable": True,
+                "retry_after_seconds": retry_after,
+            },
+            headers={"Retry-After": retry_after},
+        ) from error
+
+    except APIStatusError as error:
+        status_code = getattr(error, "status_code", 500)
+        code, raw_message = _extract_groq_error_info(error)
+        lower_msg = raw_message.lower()
+
+        if status_code == 413 or "token" in lower_msg or "context_length" in code.lower():
+            raise HTTPException(
+                status_code=429 if status_code == 413 else 400,
+                detail={
+                    "error": "TOKEN_LIMIT_EXCEEDED",
+                    "message": (
+                        "The request exceeded the model's token limit. "
+                        "Try asking a shorter question or selecting fewer pages."
+                    ),
+                    "provider_message": raw_message,
+                    "retryable": status_code == 413,
+                },
+                headers={"Retry-After": "60"} if status_code == 413 else None,
+            ) from error
+
+        if status_code >= 500:
+            raise HTTPException(
+                status_code=503,
+                detail={
+                    "error": "AI_SERVICE_BUSY",
+                    "message": (
+                        "Our AI service is currently experiencing "
+                        "high demand. Please try again in a few moments."
+                    ),
+                    "retryable": True,
+                },
+                headers={"Retry-After": "30"},
+            ) from error
+
+        raise HTTPException(
+            status_code=status_code,
+            detail={
+                "error": code or "AI_PROVIDER_ERROR",
+                "message": raw_message,
+                "retryable": False,
+            },
+        ) from error
+
+    except (APITimeoutError, APIConnectionError) as error:
+        raise HTTPException(
+            status_code=503,
+            detail={
+                "error": "AI_SERVICE_UNAVAILABLE",
+                "message": "Could not reach the AI service. Please try again shortly.",
+                "retryable": True,
+            },
+            headers={"Retry-After": "15"},
+        ) from error
 
     except ServerError as error:
         if getattr(error, "code", None) == 503:

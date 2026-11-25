@@ -51,11 +51,12 @@ QUESTION:
             },
         ],
         temperature=0.3,
+        max_tokens=512,
         response_format={"type": "json_object"},
     )
 
-    content = response.choices[0].message.content.strip()
-    data = json.loads(content)
+    content = (response.choices[0].message.content or "").strip()
+    data = json.loads(content) if content else {}
 
     queries = data.get("queries", [])
 
