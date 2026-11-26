@@ -1,6 +1,4 @@
 
-from sentence_transformers import CrossEncoder
-
 _model = None
 
 
@@ -8,6 +6,8 @@ def get_reranker():
     global _model
 
     if _model is None:
+        from sentence_transformers import CrossEncoder
+
         _model = CrossEncoder(
             "cross-encoder/ms-marco-MiniLM-L-6-v2",
             device="cpu",
@@ -21,6 +21,10 @@ def rerank_chunks(
     chunks: list,
     top_k: int = 5,
 ) -> list:
+    """Rerank retrieved chunks using a CrossEncoder model."""
+
+    if not chunks:
+        return []
 
     model = get_reranker()
 
