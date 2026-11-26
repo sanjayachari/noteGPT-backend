@@ -27,5 +27,6 @@ app.include_router(
 
 
 @app.get("/")
+@app.head("/")
 def root():
     return {"message": "AI PDF Assistant API"}
